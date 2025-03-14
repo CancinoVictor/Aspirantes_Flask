@@ -1,0 +1,45 @@
+# Ignorar el entorno virtual
+venv/
+env/
+
+# Archivos de Python compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de dependencias y paquetes
+*.egg-info/
+web.egg-info/
+*.egg
+*.whl
+
+# Configuración de entorno
+.env
+*.env
+
+# Archivos generados por pruebas
+.coverage
+htmlcov/
+.tox/
+.nox/
+pytest_cache/
+*.log
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Docker y archivos de caché
+docker-compose.override.yml
+*.log
+*.sqlite3
+db.sqlite3
+
+# Archivos temporales y de sistema
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
