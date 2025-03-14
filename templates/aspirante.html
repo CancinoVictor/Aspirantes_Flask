@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Aspirantes</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilo_aspirante.css') }}">
+    
+ 
+
+</head>
+<body id="aspira">
+        <div class="container">
+            <h1>Registro de aspirante UAdeC</h1>
+            <p>Puede Registrar 1  o más cursos</p>
+            <form name="registro" method="post" action="" onsubmit="return valida_aspirante()">
+                <div id="row">
+                    <div class="col-25">
+                        <label>R.F.C</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="f_rfc" id="f_rfc" maxlength="13" 
+                        placeholder="Ingrese RFC" class="mayusculas">
+                    </div>
+                </div>
+                
+                <div id="row">
+                    <div class="col-25">
+                        <label>Empresa</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="f_empresa" id="f_empresa">
+                            <option value="0">Seleccione:</option>
+                            <option value="1">Coca Cola</option>
+                            <option value="2">Marihuanol</option>
+                        </select>
+                    </div>
+                </div>                
+
+                <div id="row">
+                    <div class="col-25">
+                        <label>Nombre</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="f_nombre" id="f_nombre" maxlength="30" 
+                        placeholder="Ingrese Nombre" class="mayusculas">
+                    </div>
+                </div>                
+
+                <div id="row">
+                    <div class="col-25">
+                        <label>Paterno</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="f_paterno" id="f_paterno" maxlength="30" 
+                        placeholder="Ingrese Paterno" class="mayusculas">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div class="col-25">
+                        <label>Materno</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="f_materno" id="f_materno" maxlength="30" 
+                        placeholder="Ingrese Materno" class="mayusculas">
+                    </div>
+                </div>
+                
+                <div id="row">
+                    <div class="col-25">
+                        <label>Teléfono</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" name="f_telefono" id="f_telefono" maxlength="10" 
+                        placeholder="Ingrese Teléfono">
+                    </div>
+                </div>
+                
+                <div id="row">
+                    <div class="col-25">
+                        <label>Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" name="f_email" id="f_email" maxlength="100" 
+                        placeholder="Ingrese Email">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div class="col-25">
+                        <label>Curso</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="f_id_curso" id="f_id_curso">
+							<option value="0">Seleccione</option>
+                            <option value="1">Font-End HTML+CSS+JAVASCRIPT</option>
+                            <option value="2">Back-End PHYTON-FLASK</option>
+                            <option value="3">ANGULAR</option>
+                        </select>
+                    </div>
+                </div>                
+                
+                <div id="row2">
+                    <input class="boton_registro" type="submit" value="Registrar">
+                </div>
+            </form>   
+    
+        </div> <!-- end container -->   
+        <script src="{{url_for('static',filename='js/valida_aspirante.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

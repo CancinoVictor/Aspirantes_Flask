@@ -1,0 +1,156 @@
+*#aspira{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body#aspira{
+    /*background-color: rgb(196, 158, 231);*/
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('http://www.publicdomainpictures.net/pictures/50000/velka/flower-meadow.jpg');
+
+}
+
+p#aspira{  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color:red;
+}
+
+h1#aspira{
+    text-align:center;
+    color:red;
+}
+
+.mayusculas{
+    text-transform: uppercase;
+}
+
+input[type=text],input[type=tel],input[type=email],select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    resize: vertical;
+
+}
+
+label#aspira{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    float:right;
+    font-weight: bold;
+
+}
+
+input[type=submit]{
+    background-color:#4caf50;
+    color:white;
+    padding: 12px 20px;
+    border:none;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+
+    cursor: pointer;
+    float:right;
+}
+
+.container_aspirante{
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    background-color:rgb(57, 207, 102,0.3);
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    top: 55px;
+}
+
+.col-25{
+    float: left;
+    width: 10%;
+    margin-top: 6px;
+}
+
+.col-75{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+
+#row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.boton_menu{
+    text-decoration: none;
+    padding:5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background-color:#1883ba;
+    border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    -ms-border-radius:6px;
+    -o-border-radius:6px;
+    border: 2px solid #0016b0;
+}
+
+.boton_menu:hover{
+    color:black;
+    background-color: #0c6425;
+}
+
+#row2{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton{
+    border: 2px solid black;
+    text-align: center;
+}
+
+#contenedor{
+    margin-top: 65px !important;
+}
+@media screen and (max-width: 600px){
+    body#aspira{
+        background:#0c6425;
+    }
+    .col-25,.col-75,input[type=submit]{
+        width: 100%;
+        margin-top:0;
+    }
+
+    label#aspira{
+        float: left;
+    }
+
+    .container_aspirante{
+        padding: 10px;
+    }
+
+    p#aspira{
+        font-size:120%;
+    }
+
+    h1#aspira{
+        text-align: center;
+        font-size:190%;
+    }
+}
