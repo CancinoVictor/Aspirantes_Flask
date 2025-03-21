@@ -1,0 +1,20 @@
+# Ignorar el entorno virtual
+venv/
+.env
+*.pyc
+*.pyo
+__pycache__/
+*.log
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar dependencias locales
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignorar archivos de configuración personales
+*.swp
+*.swo
