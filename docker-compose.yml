@@ -5,8 +5,29 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: "23731497"
+      MYSQL_DATABASE: "db_cursos"
     ports:
       - "3307:3306"
     volumes:
       - ~/Documents/mysql:/var/lib/mysql
       - ./script.sql:/docker-entrypoint-initdb.d/script.sql
+
+  flask_app:
+    build: .
+    container_name: flask_container
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "5002:5000"
+    environment:
+      FLASK_APP: "App.py"
+      FLASK_ENV: "development"
+      MYSQL_HOST: "mysql"
+      MYSQL_PORT: "3306"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "23731497"
+      MYSQL_DATABASE: "db_cursos"
+    volumes:
+      - .:/app
+    command: flask run --host=0.0.0.0 --port=5000 --debug

@@ -1,5 +1,6 @@
 import pymysql
 import logging
+import os
 
 logging.basicConfig(level=logging.INFO)
 
@@ -9,11 +10,11 @@ class DB:
         self.cursor = None
         try:
             self.conn = pymysql.connect(
-                host='localhost',
-                port=3306,
-                user='root',
-                password='23731497',
-                db='db_cursos',
+                host=os.getenv("MYSQL_HOST", "mysql"),  # Cambiado de 'localhost' a 'mysql'
+                port=int(os.getenv("MYSQL_PORT", 3306)),  # Puerto como variable de entorno
+                user=os.getenv("MYSQL_USER", "root"),
+                password=os.getenv("MYSQL_PASSWORD", "23731497"),
+                db=os.getenv("MYSQL_DATABASE", "db_cursos"),
                 charset='utf8'
             )
             self.cursor = self.conn.cursor()
