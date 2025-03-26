@@ -10,7 +10,7 @@ class DB:
         self.cursor = None
         try:
             self.conn = pymysql.connect(
-                host=os.getenv("MYSQL_HOST", "mysql"),  # Cambiado de 'localhost' a 'mysql'
+                host=os.getenv("MYSQL_HOST", "localhost"),  # Cambiado de 'localhost' a 'mysql'
                 port=int(os.getenv("MYSQL_PORT", 3306)),  # Puerto como variable de entorno
                 user=os.getenv("MYSQL_USER", "root"),
                 password=os.getenv("MYSQL_PASSWORD", "23731497"),
